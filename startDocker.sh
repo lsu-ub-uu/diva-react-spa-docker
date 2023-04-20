@@ -2,5 +2,5 @@
 
 docker run --restart=unless-stopped -d\
     --name diva-react-spa-dev \
-    -p 9876:80 \
+    -p 9877:80 \
     diva-react-spa:latest $1
