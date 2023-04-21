@@ -18,7 +18,7 @@ RUN git log --name-status HEAD^..HEAD
 
 RUN npm install
 
-RUN npm run build
+RUN npm run build:prod
 
 FROM cora-nginx:latest
 
