@@ -33,3 +33,4 @@ coverage
 
 # Maven
 target
+/.project
