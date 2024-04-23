@@ -1,16 +1,16 @@
-<!-- ~ Copyright 2018, 2020 Uppsala University Library ~ ~ This file is part 
-	of Cora. ~ ~ Cora is free software: you can redistribute it and/or modify 
-	~ it under the terms of the GNU General Public License as published by ~ 
-	the Free Software Foundation, either version 3 of the License, or ~ (at your 
-	option) any later version. ~ ~ Cora is distributed in the hope that it will 
-	be useful, ~ but WITHOUT ANY WARRANTY; without even the implied warranty 
-	of ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the ~ GNU General 
-	Public License for more details. ~ ~ You should have received a copy of the 
-	GNU General Public License ~ along with Cora. If not, see <http://www.gnu.org/licenses 
+<!-- ~ Copyright 2018, 2020 Uppsala University Library ~ ~ This file is part
+	of Cora. ~ ~ Cora is free software: you can redistribute it and/or modify
+	~ it under the terms of the GNU General Public License as published by ~
+	the Free Software Foundation, either version 3 of the License, or ~ (at your
+	option) any later version. ~ ~ Cora is distributed in the hope that it will
+	be useful, ~ but WITHOUT ANY WARRANTY; without even the implied warranty
+	of ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the ~ GNU General
+	Public License for more details. ~ ~ You should have received a copy of the
+	GNU General Public License ~ along with Cora. If not, see <http://www.gnu.org/licenses
 	/>. -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+				 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -19,16 +19,16 @@
 		<version>2.5.0</version>
 	</parent>
 
-	<artifactId>diva-react-spa-docker</artifactId>
+	<artifactId>diva-client-gui-docker</artifactId>
 	<packaging>pom</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>DiVA React SPA Docker</name>
+	<name>DiVA Client GUI Docker</name>
 
 	<properties>
 		<outputDirectory>${project.build.directory}/docker2</outputDirectory>
 		<exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
 
-		<divaclient.version>1.0-SNAPSHOT</divaclient.version>
+		<diva-client-gui.version>1.0-SNAPSHOT</diva-client-gui.version>
 	</properties>
 
 	<scm>
@@ -41,8 +41,8 @@
 	<dependencies>
 		<dependency>
 			<groupId>se.uu.ub.cora</groupId>
-			<artifactId>divaclient</artifactId>
-			<version>${divaclient.version}</version>
+			<artifactId>diva-client-gui</artifactId>
+			<version>${diva-client-gui.version}</version>
 		</dependency>
 	</dependencies>
 
@@ -62,13 +62,12 @@
 							<artifactItems>
 								<artifactItem>
 									<groupId>se.uu.ub.cora</groupId>
-									<artifactId>divaclient</artifactId>
-									<version>${divaclient-metadata.version}</version>
+									<artifactId>diva-client-gui</artifactId>
+									<version>${diva-client-gui.version}</version>
 								</artifactItem>
 							</artifactItems>
 							<includes>**/*</includes>
 							<outputDirectory>${outputDirectory}</outputDirectory>
-							<overWrite>true</overWrite>
 							<overWriteReleases>true</overWriteReleases>
 							<overWriteSnapshots>true</overWriteSnapshots>
 						</configuration>
@@ -95,7 +94,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
+			<!--<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
 				<version>3.1.1</version>
@@ -114,7 +113,7 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin>-->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
